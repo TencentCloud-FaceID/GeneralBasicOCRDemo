@@ -1,0 +1,18 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class='logo_view_size'>
+  <image src='https://main.qcloudimg.com/raw/22312a40339480b4aebed89ce974f162.png'></image>
+</view>
+<view class='text_view_size'>
+  <text class='text_heading_size'>文字识别</text>
+  <view>
+    <text class='text_info_size'>基于腾讯优图实验室世界领先的深度学习技术，将图片上的文字内容，智能识别成为可编辑的文本。支持身份证、名片等卡证类和票据类、运单等手写体识别，支持定制化服务，有效地代替人工录入信息。</text>
+  </view>
+</view>
+
+<view class='button_viwe_size'>
+  <button class="button_size" bindtap="uploadImage">上传图片</button>
+</view>
+
+<view class='text_view_size'>
+<text class='text_footer_size'>腾讯云AI视觉团队提供技术支持</text>
+</view>

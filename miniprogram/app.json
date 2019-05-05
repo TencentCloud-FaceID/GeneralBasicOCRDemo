@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/coordinate/coordinate",
+    "pages/translation/translation"
+  ],
+  "window": {
+    "backgroundColor": "#D0052D9",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0052D9",
+    "navigationBarTitleText": "腾讯云OCR Demo",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

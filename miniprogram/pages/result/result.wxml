@@ -1,0 +1,18 @@
+<!--miniprogram/pages/result/result.wxml-->
+<view class='logo_view_size'>
+  <image src='https://main.qcloudimg.com/raw/22312a40339480b4aebed89ce974f162.png'></image>
+</view>
+
+<view class='text_view_size'>
+  <view class='text_info_size'>
+    <text class='text_lift_size'>文本num</text>
+    <text class='text_middle_size'>|</text>
+    <text class='text_right_size'>data</text>
+  </view>
+</view>
+
+<view class='button_viwe_size'>
+  <button class="button_size_707070" bindtap="uploadImage">坐标识别</button>
+  <button class="button_size_fff" bindtap="uploadImage">识别结果</button>
+  <button class="button_size_707070" bindtap="uploadImage">翻译</button>
+</view>

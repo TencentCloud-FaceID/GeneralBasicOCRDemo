@@ -1,0 +1,32 @@
+<!--miniprogram/pages/result/result.wxml-->
+<view class='logo_view_size'>
+  <image src='https://main.qcloudimg.com/raw/22312a40339480b4aebed89ce974f162.png'></image>
+</view>
+
+<view class='text_original_size'>
+  <view class='text_info_size'>
+    <view class='text_on_size'>
+      <text>原文</text>
+    </view>
+    <view class='text_down_size'>
+      <text>data</text>
+    </view>
+  </view>
+</view>
+
+<view class='text_translation_size'>
+  <view class='text_info_size'>
+    <view class='text_on_size'>
+      <text>翻译</text>
+    </view>
+    <view class='text_down_size'>
+      <text>data</text>
+    </view>
+  </view>
+</view>
+
+<view class='button_viwe_size'>
+  <button class="button_size_707070" bindtap="uploadImage">坐标识别</button>
+  <button class="button_size_707070" bindtap="uploadImage">识别结果</button>
+  <button class="button_size_fff" bindtap="uploadImage">翻译</button>
+</view>
