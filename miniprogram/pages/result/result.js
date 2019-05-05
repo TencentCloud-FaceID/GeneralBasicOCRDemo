@@ -1,66 +1,38 @@
-// miniprogram/pages/result/result.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    imageurl: "",
+    height: 200,
+    width: 200,
+    json_data: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onLoad: function(options) {
+    var myThis = this;
+    var height = options.height
+    var width = options.width
+    var height_scale = 200 / height
+    var width_height = height_scale * width
+    myThis.setData({
+      imageurl: options.imageurl,
+      width: width_height
+    })
+    wx.cloud.callFunction({
+      name: "GeneralBasicOCR",
+      data: {
+        SecretId: secret.SecretId,
+        SecretKey: secret.SecretKey,
+        base64: options.base64,
+      },
+      success(cloud_callFunction_res) {
+        var test_data = cloud_callFunction_res.result.TextDetections[0]
+        console.log(cloud_callFunction_res.result.TextDetections.length)
+        var newarray = []
+        for (var i = 0; i < cloud_callFunction_res.result.TextDetections.length; i++) {
+          newarray.push(cloud_callFunction_res.result.TextDetections[i].DetectedText)
+        }
+        myThis.setData({
+          json_data: newarray
+        })
+      },
+    })
   }
 })

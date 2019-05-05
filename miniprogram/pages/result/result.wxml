@@ -1,13 +1,13 @@
 <!--miniprogram/pages/result/result.wxml-->
-<view class='logo_view_size'>
-  <image src='https://main.qcloudimg.com/raw/22312a40339480b4aebed89ce974f162.png'></image>
+<view class='image_view_size'>
+  <image style='width: {{width}}px;height: {{height}}px;}' src='{{imageurl}}'></image>
 </view>
 
 <view class='text_view_size'>
-  <view class='text_info_size'>
-    <text class='text_lift_size'>文本num</text>
+  <view class='text_info_size' wx:for="{{json_data}}" wx:key="index">
+    <text class='text_lift_size'>文本 {{index + 1}}</text>
     <text class='text_middle_size'>|</text>
-    <text class='text_right_size'>data</text>
+    <text class='text_right_size'>{{item}}</text>
   </view>
 </view>
 

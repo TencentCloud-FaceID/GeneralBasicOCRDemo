@@ -1,10 +1,9 @@
 /* miniprogram/pages/result/result.wxss */
 
-.logo_view_size {
+.image_view_size {
   background-color: #f3f3f3;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .text_view_size {

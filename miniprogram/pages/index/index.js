@@ -1,9 +1,10 @@
 // miniprogram/pages/index/index.js
+
 Page({
   data: {
 
-  }, 
-  uploadImage(){
+  },
+  uploadImage() {
     var myThis = this;
     wx.chooseImage({
       count: 1,
@@ -18,7 +19,7 @@ Page({
               src: chooseImage_res.tempFilePaths[0],
               success(getImageInfo) {
                 wx.navigateTo({
-                  url: '../coordinate/coordinate?base64=' + base64_res.data + "&imageurl=" + chooseImage_res.tempFilePaths[0] + "&width=" + getImageInfo.width + "&height=" + getImageInfo.height
+                  url: '../result/result?base64=' + base64_res.data + "&imageurl=" + chooseImage_res.tempFilePaths[0] + "&width=" + getImageInfo.width + "&height=" + getImageInfo.height
                 })
               }
             })

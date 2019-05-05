@@ -4,6 +4,7 @@ Page({
     imageurl: "",
     height: 200, 
     width: 200,
+    json_data:"JSON"
   },
   onLoad: function (options) {
     var myThis = this;
@@ -18,10 +19,15 @@ Page({
     wx.cloud.callFunction({
       name: "GeneralBasicOCR",
       data: {
+        SecretId: secret.SecretId,
+        SecretKey: secret.SecretKey,
         base64: options.base64,
       },
       success(cloud_callFunction_res) {
-        console.log(cloud_callFunction_res)
+        console.log(cloud_callFunction_res.result)
+        myThis.setData({
+          json_data: JSON.stringify(cloud_callFunction_res.result.TextDetections)
+        })
       },
     })
   }

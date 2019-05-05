@@ -9,7 +9,7 @@
       <text>JSON</text>
     </view>
     <view class='text_down_size'>
-      <text>JSON data</text>
+      <text>{{json_data}}</text>
     </view>
   </view>
 </view>
