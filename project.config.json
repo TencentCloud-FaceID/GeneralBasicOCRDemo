@@ -34,7 +34,7 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "coordinate debug",
+					"name": "result debug",
 					"pathName": "pages/result/result",
 					"query": "",
 					"scene": null

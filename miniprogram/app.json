@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/result/result",
-    "pages/coordinate/coordinate",
-    "pages/translation/translation"
+    "pages/coordinate/coordinate"
   ],
   "window": {
     "backgroundColor": "#D0052D9",

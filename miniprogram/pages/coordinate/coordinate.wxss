@@ -46,7 +46,6 @@
 
 .button_size_fff {
   background-color: #006eff;
-  width: 125px;
   color: #fff;
   font-size: 15px;
   line-height: 30px;
@@ -55,8 +54,7 @@
 
 .button_size_707070 {
   background-color: #006eff;
-  width: 125px;
-  color: #DDDDDD;
+  color: #0047a3;
   font-size: 15px;
   line-height: 30px;
   float: left;

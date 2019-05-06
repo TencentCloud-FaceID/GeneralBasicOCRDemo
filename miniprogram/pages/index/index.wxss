@@ -7,12 +7,6 @@
   width: 100%;
 }
 
-.text_view_size {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-}
-
 .text_info_size {
   font-size: 12px;
 }
@@ -20,11 +14,6 @@
 .text_heading_size {
   font-size: 20px;
   padding-bottom: 10px;
-}
-
-.button_viwe_size {
-  display: flex;
-  padding-top: 30px;
 }
 
 .button_size {
@@ -41,4 +30,11 @@
   justify-content: center;
   font-size: 10px;
   color: #3f3f3f;
+}
+.button_viwe_size {
+  display: flex;
+}
+.text_view_size {
+  padding-left: 50px;
+  padding-right: 50px;
 }

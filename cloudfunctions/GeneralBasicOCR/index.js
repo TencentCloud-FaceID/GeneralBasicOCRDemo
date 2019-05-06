@@ -38,8 +38,6 @@ var synGeneralBasicOCR = function (imgbase64) { //人脸识别API
 
 exports.main = async (event, context) => {
   const imgbase64 = [event.base64] //读取来自客户端图片base64
-  const SecretId = [event.SecretId] //读取来自客户端图片base64
-  const SecretKey = [event.SecretKey] //读取来自客户端图片base64
   datas = await synGeneralBasicOCR(imgbase64) //调用异步函数，向腾讯云API发起OCR人脸融合请求
   return datas //返回腾讯云API的数据到客户端
 }

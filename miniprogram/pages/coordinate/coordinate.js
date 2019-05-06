@@ -2,33 +2,31 @@
 Page({
   data: {
     imageurl: "",
-    height: 200, 
+    height: 400,
     width: 200,
-    json_data:"JSON"
+    json_data: "JSON",
+    json: "",
+    windowWidth:"",
+    windowWidth_data: ""
+  },
+  result() {
+    var myThis = this
+    wx.redirectTo({
+      url: '../result/result?json=' + myThis.data.json + "&imageurl=" + myThis.data.imageurl + "&width=" + myThis.data.width + "&height=" + myThis.data.height + "&web=coordinate" + "&windowWidth=" + myThis.data.windowWidth_data
+    })
   },
   onLoad: function (options) {
+    var json_parse = JSON.parse(options.json)
+    var json_stringify = JSON.stringify(json_parse, null, 2)
     var myThis = this;
-    var height = options.height
-    var width = options.width
-    var height_scale = 200/height
-    var width_height = height_scale * width
     myThis.setData({
       imageurl: options.imageurl,
-      width: width_height
-    })
-    wx.cloud.callFunction({
-      name: "GeneralBasicOCR",
-      data: {
-        SecretId: secret.SecretId,
-        SecretKey: secret.SecretKey,
-        base64: options.base64,
-      },
-      success(cloud_callFunction_res) {
-        console.log(cloud_callFunction_res.result)
-        myThis.setData({
-          json_data: JSON.stringify(cloud_callFunction_res.result.TextDetections)
-        })
-      },
+      width: options.width,
+      height: options.height,
+      json_data: json_stringify,
+      json: options.json,
+      windowWidth: options.windowWidth / 2,
+      windowWidth_data: options.windowWidth
     })
   }
 })

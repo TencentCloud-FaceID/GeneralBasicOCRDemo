@@ -2,7 +2,8 @@
 
 Page({
   data: {
-
+    windowHeight:"20",
+    windowWidth:"400"
   },
   uploadImage() {
     var myThis = this;
@@ -19,11 +20,23 @@ Page({
               src: chooseImage_res.tempFilePaths[0],
               success(getImageInfo) {
                 wx.navigateTo({
-                  url: '../result/result?base64=' + base64_res.data + "&imageurl=" + chooseImage_res.tempFilePaths[0] + "&width=" + getImageInfo.width + "&height=" + getImageInfo.height
+                  url: '../result/result?base64=' + base64_res.data + "&imageurl=" + chooseImage_res.tempFilePaths[0] + "&width=" + getImageInfo.width + "&height=" + getImageInfo.height + "&web=index" + "&windowWidth=" + myThis.data.windowWidth
                 })
               }
             })
           }
+        })
+      }
+    })
+  },
+  onLoad(){
+    var myThis = this;
+    wx.getSystemInfo({
+      success(getSystemInfo) {
+        var windowHeight = (getSystemInfo.windowHeight - 411)/4
+        myThis.setData({
+          windowWidth: getSystemInfo.windowWidth,
+          windowHeight: windowHeight,
         })
       }
     })

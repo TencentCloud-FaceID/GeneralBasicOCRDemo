@@ -15,7 +15,6 @@
 </view>
 
 <view class='button_viwe_size'>
-  <button class="button_size_fff" bindtap="uploadImage">坐标识别</button>
-  <button class="button_size_707070" bindtap="uploadImage">识别结果</button>
-  <button class="button_size_707070" bindtap="uploadImage">翻译</button>
+  <button class="button_size_707070" style='width: {{windowWidth}}px;' bindtap="result">识别结果</button>
+  <button class="button_size_fff" style='width: {{windowWidth}}px;' bindtap="coordinate">坐标识别</button>
 </view>
