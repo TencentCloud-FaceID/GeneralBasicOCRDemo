@@ -47,7 +47,6 @@ Page({
         break;
       case "coordinate":
         var json_parse = JSON.parse(options.json)
-        console.log(json_parse)
         var newarray = []
         for (var i = 0; i < json_parse.result.TextDetections.length; i++) {
           newarray.push(json_parse.result.TextDetections[i].DetectedText)

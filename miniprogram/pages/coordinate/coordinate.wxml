@@ -1,6 +1,7 @@
 <!--miniprogram/pages/result/result.wxml-->
 <view class='image_view_size'>
-  <image style='width: {{width}}px;height: {{height}}px;}' src='{{imageurl}}'></image>
+  <!-- <image style='width: {{width}}px;height: {{height}}px;' src='{{imageurl}}'></image> -->
+  <canvas canvas-id="Canvas" style='width: {{width}}px;height: {{height}}px;'></canvas>
 </view>
 
 <view class='text_view_size'>

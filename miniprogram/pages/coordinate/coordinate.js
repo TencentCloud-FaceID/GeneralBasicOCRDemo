@@ -6,7 +6,7 @@ Page({
     width: 200,
     json_data: "JSON",
     json: "",
-    windowWidth:"",
+    windowWidth: "",
     windowWidth_data: ""
   },
   result() {
@@ -28,5 +28,14 @@ Page({
       windowWidth: options.windowWidth / 2,
       windowWidth_data: options.windowWidth
     })
+    var width_num = parseFloat(options.width)
+    const ctx = wx.createCanvasContext('Canvas'); //首页LOGO
+    ctx.drawImage(options.imageurl, 0, 0, width_num, 200);
+    ctx.setFontSize(15)
+    ctx.setFillStyle('red')
+    for (var i = 0; i < json_parse.result.TextDetections.length; i++) {
+      ctx.fillText(json_parse.result.TextDetections[i].DetectedText, json_parse.result.TextDetections[i].Polygon[0].X, json_parse.result.TextDetections[i].Polygon[0].Y)
+    }
+    ctx.draw();
   }
 })

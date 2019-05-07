@@ -35,7 +35,7 @@
 				{
 					"id": 0,
 					"name": "result debug",
-					"pathName": "pages/result/result",
+					"pathName": "pages/coordinate/coordinate",
 					"query": "",
 					"scene": null
 				}
